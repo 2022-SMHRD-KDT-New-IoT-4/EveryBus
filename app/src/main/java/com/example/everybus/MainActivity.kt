@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "mysql"
-        registerBtn = findViewById<View>(R.id.register_btn) as Button
-        idet = findViewById<View>(R.id.register_id) as EditText
-        pwet = findViewById<View>(R.id.register_pw) as EditText
+
         registerBtn!!.setOnClickListener {
             try {
                 Toast.makeText(this@MainActivity, "버튼눌림", Toast.LENGTH_SHORT).show()
