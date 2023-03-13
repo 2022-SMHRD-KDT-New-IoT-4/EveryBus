@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLineId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnTest"
+        app:layout_constraintEnd_toEndOf="@+id/btnTest"
+        app:layout_constraintStart_toStartOf="@+id/btnTest" />
+
+    <TextView
+        android:id="@+id/tvLineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvLineId"
+        app:layout_constraintEnd_toEndOf="@+id/tvLineId"
+        app:layout_constraintStart_toStartOf="@+id/tvLineId" />
+
+    <TextView
+        android:id="@+id/tvUp"
+        android:layout_width="62dp"
+        android:layout_height="22dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvLineName"
+        app:layout_constraintEnd_toEndOf="@+id/tvLineName"
+        app:layout_constraintStart_toStartOf="@+id/tvLineName" />
+
+    <TextView
+        android:id="@+id/tvDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvUp"
+        app:layout_constraintEnd_toEndOf="@+id/tvUp"
+        app:layout_constraintStart_toStartOf="@+id/tvUp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
