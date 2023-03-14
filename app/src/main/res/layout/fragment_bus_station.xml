@@ -12,7 +12,7 @@
     <View
         android:id="@+id/view2"
         android:layout_width="409dp"
-        android:layout_height="163dp"
+        android:layout_height="200dp"
         android:background="#18A1DF"
         android:backgroundTint="#3AB7EF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,20 +33,28 @@
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:background="#d3d3d3"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" >
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="간선" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="풍암사거리(동)"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/textView18"
@@ -60,13 +68,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="마제부영아파트 방면"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <TextView
         android:id="@+id/textView18"
@@ -76,6 +85,7 @@
         android:background="@null"
         android:backgroundTint="#FDFDFD"
         android:text="2261"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -84,10 +94,9 @@
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         android:padding="0sp"
         android:scaleType="centerCrop"
@@ -99,9 +108,8 @@
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
         android:padding="0sp"
         android:scaleType="centerCrop"
@@ -115,29 +123,43 @@
         android:id="@+id/stationLike"
         android:layout_width="34dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
         android:padding="0sp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toTopOf="@+id/textView17"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.766"
         app:srcCompat="@drawable/star_off" />
 
     <ImageButton
         android:id="@+id/imageButton8"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/transparent"
         android:padding="0sp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView17"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.29"
         app:srcCompat="@drawable/info" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="12dp"
+        android:text=" 정보"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/imageButton8"
+        app:layout_constraintVertical_bias="0.47000003" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

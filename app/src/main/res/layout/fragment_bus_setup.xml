@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#A34D4D"
     android:backgroundTint="#FFFFFF"
+    app:layout_constraintWidth_percent="0"
     tools:context=".bus_Setup">
 
     <TextView
@@ -73,7 +74,7 @@
         android:textColor="#101010"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout3"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
@@ -117,7 +118,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="#0E0E0E"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +128,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="#0B0101"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,7 +148,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="#0E0E0E"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/button3"
@@ -157,7 +158,7 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="#090808"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/button"
@@ -171,7 +172,10 @@
         android:layout_height="60dp"
         android:backgroundTint="#FFFFFF"
         android:gravity="center|left"
-        android:text="모드 전환"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:text="   모드 전환"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
@@ -180,17 +184,10 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="409dp"
-        android:layout_height="46dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="221dp"></LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
         android:background="#090909"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"

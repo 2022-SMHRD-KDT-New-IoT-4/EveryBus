@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="120dp"
     android:background="#E31C1C"
     android:backgroundTint="#FFFFFF"
     tools:context=".MainActivity">
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="114dp" />
+        app:layout_constraintGuide_end="-14dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -37,46 +37,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.59" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="30dp"
         android:gravity="center"
-        android:text="광천터미널광주"
+        android:text="textView"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toEndOf="@+id/imgLike"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.551" />
 
     <TextView
         android:id="@+id/tvSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
         android:text="TextView"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvTime2"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toEndOf="@+id/imgLike"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.578" />
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <TextView
         android:id="@+id/tvAlive4"
@@ -105,13 +105,12 @@
         android:id="@+id/tvTime2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.49" />
 
     <TextView
         android:id="@+id/tvAlive3"
@@ -136,21 +135,9 @@
         app:layout_constraintTop_toTopOf="@+id/tvAlive3" />
 
     <ImageButton
-        android:id="@+id/imgLike"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#AFAEAE"
-        android:backgroundTint="#9C9C9C"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/star_off" />
-
-    <ImageButton
         android:id="@+id/imageButton10"
-        android:layout_width="35dp"
-        android:layout_height="42dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -158,6 +145,16 @@
         app:layout_constraintStart_toEndOf="@+id/tvPO"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ridebell" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003"
+        app:srcCompat="@drawable/star_bus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
