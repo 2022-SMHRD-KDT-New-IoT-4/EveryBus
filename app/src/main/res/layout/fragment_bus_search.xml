@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/search" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etStation"
         android:layout_width="322dp"
         android:layout_height="45dp"
         android:background="@null"
@@ -60,7 +60,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="8sp"
         android:text="  최근검색목록"
-        android:textColor="#B3000000"
+        android:textColor="#8C8787"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"

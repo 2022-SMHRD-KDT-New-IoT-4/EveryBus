@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 
@@ -22,6 +24,9 @@ class BookmarkActivity : Fragment() {
        var view = inflater.inflate(R.layout.fragment_bookmark, container, false)
        val rc2 = view.findViewById<RecyclerView>(R.id.rc)
        var bookmarkList = ArrayList<BookmarkVO>()
+
+
+
        // 데이터 넣어주기
        bookmarkList.add(BookmarkVO(R.drawable.bus,"송암74","동명회,송원고방면",R.drawable.ridebell))
        bookmarkList.add(BookmarkVO(R.drawable.station, "송원대학교","", R.drawable.burger))
@@ -31,6 +36,8 @@ class BookmarkActivity : Fragment() {
        rc2.adapter = adapter
        rc2.layoutManager = LinearLayoutManager(this.context)
        return view
+
+
    }
 
 
