@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TestActivity">
 
     <Button
         android:id="@+id/btnTest"
@@ -52,4 +52,25 @@
         app:layout_constraintBottom_toTopOf="@+id/tvUp"
         app:layout_constraintEnd_toEndOf="@+id/tvUp"
         app:layout_constraintStart_toStartOf="@+id/tvUp" />
+
+    <TextView
+        android:id="@+id/tvLineKind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvDown"
+        app:layout_constraintEnd_toEndOf="@+id/tvDown"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvDown" />
+
+    <EditText
+        android:id="@+id/etLineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/tvLineKind"
+        tools:layout_editor_absoluteX="121dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
