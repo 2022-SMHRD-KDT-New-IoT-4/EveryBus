@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="340dp"
         android:text="편집"
-        android:textColor="#8C8787"
+        android:textColor="#CC000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.444" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imgSet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"

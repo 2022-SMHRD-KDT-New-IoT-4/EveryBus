@@ -19,12 +19,15 @@ class BusSearchActivity : Fragment() {
         val rc3 = view.findViewById<RecyclerView>(R.id.rc2)
         var busSearchRecentlyList = ArrayList<BusSearchVO>()
         // 데이터 넣어주기
-        busSearchRecentlyList.add(BusSearchVO("매월26", R.drawable.star,R.drawable.rightarrow))
+        busSearchRecentlyList.add(BusSearchVO("대촌69", "지선버스",R.drawable.star_bus_on))
+        busSearchRecentlyList.add(BusSearchVO("마을760", "마을버스",R.drawable.star_bus))
+        busSearchRecentlyList.add(BusSearchVO("1187", "지선버스",R.drawable.star_bus_on))
 
         // 버스 Adapter
         val adapter = BusSearchAdapter(requireActivity().applicationContext, busSearchRecentlyList )
         rc3.adapter = adapter
         rc3.layoutManager = LinearLayoutManager(this.context)
+
 
 
         return view

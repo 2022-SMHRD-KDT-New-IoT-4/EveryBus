@@ -14,11 +14,11 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         // 버스&정류장 이름, 오른쪽 화살표, 즐겨찾기 여부
         val tvName : TextView
-        val imgArrow : ImageView
+        val tvName_sub : TextView
         val imgBookmark : ImageView
         init {
             tvName = view.findViewById(R.id.tvName_2)
-            imgArrow = view.findViewById(R.id.imgRightArrow)
+            tvName_sub = view.findViewById(R.id.tvName_2_sub)
             imgBookmark = view.findViewById(R.id.imgBookmark)
         }
     }
@@ -30,10 +30,10 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
     }
 
     override fun onBindViewHolder(holder: BusSearchAdapter.ViewHolder, position: Int) {
-        // 버스&정류장 이름
+        // 버스이름
         holder.tvName.text = data[position].Name
-        // 오른쪽 화살표
-        holder.imgArrow.setImageResource(data[position].img_2)
+        // 버스 정보
+        holder.tvName_sub.text = data[position].Name_sub
         // 즐겨찾기 유무 아이콘
         holder.imgBookmark.setImageResource(data[position].img)
     }

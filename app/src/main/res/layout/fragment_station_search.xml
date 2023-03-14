@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/search" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etStation"
         android:layout_width="322dp"
         android:layout_height="45dp"
         android:background="@null"
