@@ -21,7 +21,7 @@ class BookmarkActivity : Fragment() {
        inflater: LayoutInflater, container: ViewGroup?,
        savedInstanceState: Bundle?
    ): View{
-       var view = inflater.inflate(R.layout.fragment_bookmark, container, false)
+       var view = inflater.inflate(R.layout.fragment_bookmark   , container, false)
        val rc2 = view.findViewById<RecyclerView>(R.id.rc)
        var bookmarkList = ArrayList<BookmarkVO>()
 
