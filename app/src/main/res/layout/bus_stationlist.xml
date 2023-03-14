@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_end="60dp" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -76,7 +76,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <TextView
         android:id="@+id/tvAlive4"
@@ -147,13 +147,13 @@
         app:srcCompat="@drawable/ridebell" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imgStar"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59000003"
+        app:layout_constraintVertical_bias="0.487"
         app:srcCompat="@drawable/star_bus" />
 
 
