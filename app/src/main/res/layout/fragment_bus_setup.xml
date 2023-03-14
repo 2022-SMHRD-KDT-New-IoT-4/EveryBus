@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A34D4D"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".bus_Setup">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#d3d3d3"
+        android:gravity="bottom"
+        android:text="서비스 설정"
+        android:textColor="#0E0E0E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center|left"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="컬러테마설정"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center|left"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="문의하기"
+        android:textColor="#121111"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#d3d3d3"
+        android:gravity="bottom"
+        android:text="개인정보/고객지원"
+        android:textColor="#101010"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center|left"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="위치정보 이용 동의"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center|left"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="문의하기"
+        android:textColor="#121111"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#0E0E0E"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#0B0101"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#171717"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#0E0E0E"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#090808"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"></LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center|left"
+        android:text="모드 전환"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="409dp"
+        android:layout_height="46dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="221dp"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#090909"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2"></LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
