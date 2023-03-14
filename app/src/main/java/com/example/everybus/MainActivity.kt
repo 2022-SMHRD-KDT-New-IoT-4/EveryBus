@@ -29,6 +29,13 @@ class MainActivity : AppCompatActivity() {
                     R.id.fl,
                     BusSearchActivity()
                 ).commit()
+            }else if(item.itemId==R.id.tap_stationSearch){
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fl,
+                    StationSearch()
+                ).commit()
+
+
             }
 
             true
