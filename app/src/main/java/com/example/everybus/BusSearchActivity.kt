@@ -16,7 +16,7 @@ class BusSearchActivity : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.fragment_bus_search, container, false)
-        val rc3 = view.findViewById<RecyclerView>(R.id.rc2)
+        val rc3 = view.findViewById<RecyclerView>(R.id.rcStation1)
         var busSearchRecentlyList = ArrayList<BusSearchVO>()
         // 데이터 넣어주기
         busSearchRecentlyList.add(BusSearchVO("대촌69", "지선버스",R.drawable.star_bus_on))

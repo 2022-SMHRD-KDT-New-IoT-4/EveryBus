@@ -60,6 +60,8 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
         holder.tvAlive4.text = data[position].alive2
         holder.tvPO.text = data[position].po
         holder.tvPO2.text = data[position].po2
+
+        //MyPrefs 라는 이름의 SharedPreferences 인스턴스
         val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
         val key = "favorite_" + holder.tvTitle.text.toString()
@@ -72,6 +74,7 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
 
             isFavorite = !isFavorite
             val editor = sharedPreferences.edit()
+            //holder.tvSub.text.toString()) 를 호출하여 현재 아이템의 정보를 담은 BusStationVO 객체를 생성
             val busInfo = busLike(holder.tvTitle.text.toString(), holder.tvSub.text.toString())
             val gson = Gson()
             val json = gson.toJson(busInfo)
@@ -89,15 +92,16 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
             }
 
             editor.putBoolean(key, !isFavorite)
-            //즐겨찾기가 되어 있는 상태에서 한번더 누르면 삭제
+            //즐겨찾기가 되어 있는 상태에서 한번더 누르면 삭제 코드 인데 안됨
 
             if (isFavorite) {
                 editor.putString(info, json)
             } else {
                 editor.remove(info)
             }
-
+            //SharedPreferences 에 info,json 저장
             editor.putString(info, json)
+            //변경사항 저장
             editor.apply()
             Log.d("List", gson.toJson(busInfoList))
 
