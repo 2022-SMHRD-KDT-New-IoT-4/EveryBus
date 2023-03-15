@@ -11,6 +11,8 @@
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textColor="#0C0C0C"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +45,7 @@
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="2dp"
-        android:layout_height="30dp"
+        android:layout_height="15dp"
         android:layout_marginTop="26dp"
         android:background="#AEACAC"
         android:orientation="horizontal"
@@ -51,7 +53,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tvTitleSr"
         app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="@+id/tvTitleSr"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002"></LinearLayout>
 
     <ImageButton
         android:id="@+id/imgStarSr"

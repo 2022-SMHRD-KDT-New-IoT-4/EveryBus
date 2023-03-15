@@ -13,7 +13,7 @@ class BusStation: AppCompatActivity() {
 
 
 
-        var rcStation1 = findViewById<RecyclerView>(R.id.rcStation1)
+        var rcStation2 = findViewById<RecyclerView>(R.id.rcStation)
 
 
 
@@ -26,8 +26,8 @@ class BusStation: AppCompatActivity() {
 
         val adapter = busStationAdapter(applicationContext,busList)
 
-        rcStation1.adapter = adapter
-        rcStation1.layoutManager = GridLayoutManager(this,1)
+        rcStation2.adapter = adapter
+        rcStation2.layoutManager = GridLayoutManager(this,1)
 
 
 

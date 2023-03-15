@@ -19,8 +19,8 @@ class StationSearch : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view = inflater.inflate(R.layout.fragment_bus_station, container, false)
-        val rcStation = view.findViewById<RecyclerView>(R.id.rcStation1)
+        var view = inflater.inflate(R.layout.fragment_bus_search, container, false)
+        val rcStation = view.findViewById<RecyclerView>(R.id.rcStation)
         var StationList = ArrayList<StationSearchVO>()
 
         StationList.add(StationSearchVO("CBS방송국","상무중 방면","2013"))

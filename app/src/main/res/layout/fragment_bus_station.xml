@@ -11,24 +11,13 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="409dp"
-        android:layout_height="200dp"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
         android:background="#18A1DF"
         android:backgroundTint="#3AB7EF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcStation1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -132,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toTopOf="@+id/textView17"
-        app:layout_constraintVertical_bias="0.766"
+        app:layout_constraintVertical_bias="0.65"
         app:srcCompat="@drawable/star_off" />
 
     <ImageButton
@@ -161,5 +150,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toTopOf="@+id/imageButton8"
         app:layout_constraintVertical_bias="0.47000003" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcStationBus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
