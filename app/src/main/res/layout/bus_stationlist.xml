@@ -40,7 +40,7 @@
         app:layout_constraintGuide_end="60dp" />
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvBSLineKind"
         android:layout_width="110dp"
         android:layout_height="20dp"
         android:gravity="center"
@@ -54,21 +54,20 @@
         app:layout_constraintVertical_bias="0.551" />
 
     <TextView
-        android:id="@+id/tvSub"
+        android:id="@+id/tvBSNextBusStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
         android:text="TextView"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvTime2"
-        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.45" />
 
     <TextView
-        android:id="@+id/tvTime"
+        android:id="@+id/tvBSRemainMin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -79,30 +78,30 @@
         app:layout_constraintVertical_bias="0.55" />
 
     <TextView
-        android:id="@+id/tvAlive1"
+        android:id="@+id/tvBSRemainStop1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTime"
-        app:layout_constraintStart_toEndOf="@+id/tvTime"
-        app:layout_constraintTop_toTopOf="@+id/tvTime" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin1"
+        app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin1"
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainMin1" />
 
     <TextView
-        android:id="@+id/tvPO1"
+        android:id="@+id/tvBSConfusion1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAlive1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop1"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/tvAlive1"
-        app:layout_constraintTop_toTopOf="@+id/tvAlive1"
+        app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop1"
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop1"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/tvTime2"
+        android:id="@+id/tvBSRemainMin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -113,41 +112,41 @@
         app:layout_constraintVertical_bias="0.447" />
 
     <TextView
-        android:id="@+id/tvAlive2"
+        android:id="@+id/tvBSRemainStop2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTime2"
-        app:layout_constraintStart_toEndOf="@+id/tvTime2"
-        app:layout_constraintTop_toTopOf="@+id/tvTime2" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin2"
+        app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin2"
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainMin2" />
 
     <TextView
-        android:id="@+id/tvPO2"
+        android:id="@+id/tvBSConfusion2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAlive2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/tvAlive2"
-        app:layout_constraintTop_toTopOf="@+id/tvAlive2" />
+        app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop2"
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop2" />
 
     <ImageButton
-        android:id="@+id/imgBST_rb"
+        android:id="@+id/imgBS_rb"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvPO1"
+        app:layout_constraintStart_toEndOf="@+id/tvBSConfusion1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ridebell" />
 
     <ImageButton
-        android:id="@+id/imgBST_bm"
+        android:id="@+id/imgBS_bm"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
