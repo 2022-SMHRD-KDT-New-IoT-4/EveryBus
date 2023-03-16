@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +17,7 @@ class BookmarkAdapter(val context: Context, val data: ArrayList<BookmarkVO>)
             val tvName : TextView
             val tvRoute : TextView
             val img1 : ImageView
-            val img2 : ImageView
+            val img2 : ImageButton
           init {
               tvName = view.findViewById(R.id.tvName)
               tvRoute = view.findViewById(R.id.tvRoute)

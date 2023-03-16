@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -16,26 +17,36 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
 
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvTitle: TextView
-        val tvSub: TextView
-        val tvTime: TextView
-        val tvTime2: TextView
-        val tvAlive3: TextView
-        val tvAlive4: TextView
-        val tvPO: TextView
-        val tvPO2: TextView
-        val imgStar: ImageButton
+        val tvBusId : TextView
+        val tvStopName : TextView
+        val tvRoute1 : TextView
 
+        val imgBST_bm : ImageView
+        val tvTitle : TextView
+        val tvSub : TextView
+        val tvTime1 : TextView
+        val tvAlive1 : TextView
+        val tvPO1 : TextView
+        val tvTime2 : TextView
+        val tvAlive2 : TextView
+        val tvPO2 : TextView
+        val imgBST_rb : ImageView
         init {
+            tvBusId = view.findViewById(R.id.tvBusId)
+            tvStopName = view.findViewById(R.id.tvStopName)
+            tvRoute1 = view.findViewById(R.id.tvRoute1)
+
+            imgBST_bm  = view.findViewById(R.id.imgBST_bm)
             tvTitle = view.findViewById(R.id.tvTitle)
             tvSub = view.findViewById(R.id.tvSub)
-            tvTime = view.findViewById(R.id.tvTime)
+            tvTime1 = view.findViewById(R.id.tvTime1)
+            tvAlive1 = view.findViewById(R.id.tvAlive1)
+            tvPO1 = view.findViewById(R.id.tvPO1)
             tvTime2 = view.findViewById(R.id.tvTime2)
-            tvAlive3 = view.findViewById(R.id.tvAlive3)
-            tvAlive4 = view.findViewById(R.id.tvAlive4)
-            tvPO = view.findViewById(R.id.tvPO)
+            tvAlive2 = view.findViewById(R.id.tvAlive2)
             tvPO2 = view.findViewById(R.id.tvPO2)
-            imgStar = view.findViewById(R.id.imgStar)
+            imgBST_rb = view.findViewById(R.id.imgBST_rb)
+
         }
 
     }
@@ -52,14 +63,20 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvTitle.text = data[position].title
-        holder.tvSub.text = data[position].sub
-        holder.tvTime.text = data[position].time
-        holder.tvTime2.text = data[position].time2
-        holder.tvAlive3.text = data[position].alive
-        holder.tvAlive4.text = data[position].alive2
-        holder.tvPO.text = data[position].po
-        holder.tvPO2.text = data[position].po2
+        holder.tvBusId.text = data[position].tvBusId
+        holder.tvStopName.text = data[position].tvStopName
+        holder.tvRoute1.text = data[position].tvRoute1
+
+        holder.imgBST_bm.setImageResource(data[position].imgBST_bm)
+        holder.tvTitle.text = data[position].tvTitle
+        holder.tvSub.text = data[position].tvSub
+        holder.tvTime1.text = data[position].tvTime1
+        holder.tvAlive1.text = data[position].tvAlive1
+        holder.tvPO1.text = data[position].tvPO1
+        holder.tvTime2.text = data[position].tvTime2
+        holder.tvAlive2.text = data[position].tvAlive2
+        holder.tvPO2.text = data[position].tvPO2
+        holder.imgBST_rb.setImageResource(data[position].imgBST_rb)
 
         //MyPrefs 라는 이름의 SharedPreferences 인스턴스
         val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)

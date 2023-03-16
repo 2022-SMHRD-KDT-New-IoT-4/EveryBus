@@ -1,6 +1,7 @@
 package com.example.everybus
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,9 @@ class BusStation: AppCompatActivity() {
 
 
         var rcStation2 = findViewById<RecyclerView>(R.id.rcStation)
-
+        var tvBusId = findViewById<TextView>(R.id.tvBusId)
+        var tvStopName = findViewById<TextView>(R.id.tvStopName)
+        var tvRoute1 = findViewById<TextView>(R.id.tvRoute1)
 
 
         var busList = ArrayList<BusStationVO>()

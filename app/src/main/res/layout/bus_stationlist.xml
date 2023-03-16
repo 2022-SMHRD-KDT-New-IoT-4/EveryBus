@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.55" />
 
     <TextView
-        android:id="@+id/tvAlive4"
+        android:id="@+id/tvAlive1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -90,15 +90,15 @@
         app:layout_constraintTop_toTopOf="@+id/tvTime" />
 
     <TextView
-        android:id="@+id/tvPO"
+        android:id="@+id/tvPO1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAlive4"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlive1"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/tvAlive4"
-        app:layout_constraintTop_toTopOf="@+id/tvAlive4"
+        app:layout_constraintStart_toEndOf="@+id/tvAlive1"
+        app:layout_constraintTop_toTopOf="@+id/tvAlive1"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -113,7 +113,7 @@
         app:layout_constraintVertical_bias="0.447" />
 
     <TextView
-        android:id="@+id/tvAlive3"
+        android:id="@+id/tvAlive2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -129,25 +129,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAlive3"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlive2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/tvAlive3"
-        app:layout_constraintTop_toTopOf="@+id/tvAlive3" />
+        app:layout_constraintStart_toEndOf="@+id/tvAlive2"
+        app:layout_constraintTop_toTopOf="@+id/tvAlive2" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/imgBST_rb"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvPO"
+        app:layout_constraintStart_toEndOf="@+id/tvPO1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ridebell" />
 
     <ImageButton
-        android:id="@+id/imgStar"
+        android:id="@+id/imgBST_bm"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"

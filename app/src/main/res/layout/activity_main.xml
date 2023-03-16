@@ -23,6 +23,7 @@ tools:context=".MainActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         app:layout_constraintGuide_end="66dp" />
 
 <com.google.android.material.bottomnavigation.BottomNavigationView
