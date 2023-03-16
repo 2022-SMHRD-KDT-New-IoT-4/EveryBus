@@ -13,27 +13,32 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         // 버스&정류장 이름, 오른쪽 화살표, 즐겨찾기 여부
-        val tvName : TextView
-        val tvName_sub : TextView
+        val tvLineName : TextView
+        val tvLineKind :  TextView
+        val imgArrow : ImageView
         val imgBookmark : ImageView
+
         init {
-            tvName = view.findViewById(R.id.tvName_2)
-            tvName_sub = view.findViewById(R.id.tvName_2_sub)
+            tvLineName = view.findViewById(R.id.tvLineName)
+            tvLineKind = view.findViewById(R.id.tvLineKind)
+            imgArrow = view.findViewById(R.id.imgRightArrow)
             imgBookmark = view.findViewById(R.id.imgBookmark)
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BusSearchAdapter.ViewHolder {
         val inflater = LayoutInflater.from(context)
-        // bus_search_recently.xml : 버스 최근 검색 목록
-        var view = inflater.inflate(R.layout.bus_search_recently, parent, false)
+        // bus_search.xml : 버스 검색 목록
+        var view = inflater.inflate(R.layout.bus_search_list, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: BusSearchAdapter.ViewHolder, position: Int) {
-        // 버스이름
-        holder.tvName.text = data[position].Name
-        // 버스 정보
-        holder.tvName_sub.text = data[position].Name_sub
+        // 버스&정류장 이름
+        holder.tvLineName.text = data[position].LineName
+        // 방면
+        holder.tvLineKind.text = data[position].LineKind
+        // 오른쪽 화살표
+        holder.imgArrow.setImageResource(data[position].img_2)
         // 즐겨찾기 유무 아이콘
         holder.imgBookmark.setImageResource(data[position].img)
     }

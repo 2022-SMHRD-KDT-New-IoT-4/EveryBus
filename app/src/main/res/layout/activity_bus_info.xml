@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    tools:context=".BusInfoActivity">
+
+
+    <TextView
+        android:id="@+id/tvBusInfoLineName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#FEFEFE"
+        android:gravity="center"
+        android:text="버스 번호"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imgArrow"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBusInfoLineName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRegion"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/border_buttom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="운행지역"
+            app:layout_constraintBottom_toTopOf="@+id/tvDirUpDown"
+            app:layout_constraintStart_toStartOf="@+id/tvDirUpDown" />
+
+        <TextView
+            android:id="@+id/tvDirUpDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여기서부터 저기까지"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBusInfoLineKind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="무슨버스?"
+            app:layout_constraintStart_toStartOf="@+id/tvDirUpDown"
+            app:layout_constraintTop_toBottomOf="@+id/tvDirUpDown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTime"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/border_buttom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clRegion">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="운행시간"
+            app:layout_constraintBottom_toTopOf="@+id/tvRunTime"
+            app:layout_constraintStart_toStartOf="@+id/tvRunTime" />
+
+        <TextView
+            android:id="@+id/tvRunTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첫차시간~막차시간"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBTime"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/border_buttom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTime">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="운행시간"
+            app:layout_constraintBottom_toTopOf="@+id/tvRunInterval"
+            app:layout_constraintStart_toStartOf="@+id/tvRunInterval" />
+
+        <TextView
+            android:id="@+id/tvRunInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몇분"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

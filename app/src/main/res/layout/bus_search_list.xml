@@ -7,20 +7,19 @@
     android:background="@drawable/border_buttom">
     <!--   > 이미지 : rightarrow.png -->
     <TextView
-        android:id="@+id/tvName_2"
+        android:id="@+id/tvLineName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textColor="#4CAF50"
-        android:textSize="16sp"
-        android:textStyle="normal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="버스번호"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgBookmark"
+        android:id="@+id/imgRightArrow"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginTop="8dp"
@@ -31,17 +30,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <ImageView
+        android:id="@+id/imgBookmark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="224dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLineKind"
+        app:layout_constraintEnd_toStartOf="@+id/imgRightArrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvLineName"
+        app:layout_constraintTop_toTopOf="@+id/tvLineName"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/rightarrow" />
+
     <TextView
-        android:id="@+id/tvName_2_sub"
+        android:id="@+id/tvLineKind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="TextView"
+        android:layout_marginBottom="16dp"
+        android:text="버스종류"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvName_2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvName_2"
-        app:layout_constraintTop_toBottomOf="@+id/tvName_2"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintStart_toStartOf="@+id/tvLineName"
+        app:layout_constraintTop_toBottomOf="@+id/tvLineName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
