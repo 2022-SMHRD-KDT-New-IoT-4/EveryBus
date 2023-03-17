@@ -64,7 +64,7 @@ class BusSearchActivity : Fragment() {
         rcBusSearch.layoutManager = LinearLayoutManager(this.context)
 
         etBus.setOnClickListener {
-            tvRecently.setText("광주")
+//            tvRecently.setText("광주")
             val intent = Intent(activity, Bus_Search2::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
