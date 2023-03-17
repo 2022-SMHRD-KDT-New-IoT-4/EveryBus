@@ -20,7 +20,7 @@ class BusRouteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.bus_route)
+        setContentView(R.layout.bus_search_3)
         // AdapterView 사용 6단계
         // 1. Container 결정 :
 

@@ -1,10 +1,13 @@
 package com.example.everybus
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,14 +18,19 @@ class BusSearchActivity : Fragment() {
 
     // 버스 검색
     lateinit var queue: RequestQueue //Request 객체를 서버로 요청 보내는 역할
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var fragview = inflater.inflate(R.layout.fragment_bus_search, container, false)
-        var bus_list_view = inflater.inflate(R.layout.bus_search_list, container, false)
-        val rcBusSearch = fragview.findViewById<RecyclerView>(R.id.rcBusSearch)
+        var view = inflater.inflate(R.layout.fragment_bus_search, container, false)
+        var bus_list_view = inflater.inflate(R.layout.bus_search_recently, container, false)
+        val rcBusSearch = view.findViewById<RecyclerView>(R.id.rc2)
         var busList = ArrayList<BusSearchVO>()
+        // 버스검색 textview
+        val etBus = view.findViewById<EditText>(R.id.etStation)
+        // 최근검색목록 -> 광주
+        val tvRecently = view.findViewById<TextView>(R.id.textView3)
 
         // 1. Server에 요청해서 모든 버스정보 불러오기 JSON (ArrayList)
 
@@ -47,13 +55,20 @@ class BusSearchActivity : Fragment() {
 
 
         // 데이터 넣어주기
-        busList.add(BusSearchVO("매월26", "어쩌고방향", R.drawable.star,R.drawable.rightarrow))
+//        busList.add(BusSearchVO_2("매월26", "어쩌고방향", R.drawable.star,R.drawable.rightarrow))
+        busList.add(BusSearchVO("매월26", "월드컵경기장 방향",R.drawable.star_bus_on))
 
         // 버스 Adapter
         val adapter = BusSearchAdapter(requireActivity().applicationContext, busList )
         rcBusSearch.adapter = adapter
         rcBusSearch.layoutManager = LinearLayoutManager(this.context)
 
+        etBus.setOnClickListener {
+            tvRecently.setText("광주")
+            val intent = Intent(activity, Bus_Search2::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
 
         return view
     }

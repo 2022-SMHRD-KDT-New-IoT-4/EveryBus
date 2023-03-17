@@ -19,8 +19,8 @@
         android:paddingBottom="8dp"
         android:text="버스 검색"
         android:textColor="#000000"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/search" />
 
     <EditText
-        android:id="@+id/etBusSearch"
+        android:id="@+id/etStation"
         android:layout_width="322dp"
         android:layout_height="45dp"
         android:background="@null"
@@ -60,7 +60,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="8sp"
         android:text="  최근검색목록"
-        android:textColor="#B3000000"
+        android:textColor="#8C8787"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcBusSearch"
+        android:id="@+id/rc2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,5 +91,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvTitle2"
         app:layout_constraintVertical_bias="0.547" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

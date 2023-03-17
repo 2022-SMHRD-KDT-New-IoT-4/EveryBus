@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -14,7 +13,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 
 
-class BusStationActivity: AppCompatActivity() {
+class BusStation: AppCompatActivity() {
 
     lateinit var queue: RequestQueue
     lateinit var request: StringRequest

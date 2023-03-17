@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         val bnv = findViewById<BottomNavigationView>(R.id.bnv)
         val fl = findViewById<FrameLayout>(R.id.fl)
 
+        // Splash 화면 띄워주고 바로 즐겨찾기 화면으로 !
+        supportFragmentManager.beginTransaction().replace(
+            R.id.fl,
+            BookmarkActivity()
+        ).commit()
+
+
         // 하단바 버튼 클릭
         bnv.setOnItemSelectedListener { item ->
             if (item.itemId == R.id.tap_bookmark){
