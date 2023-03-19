@@ -11,6 +11,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import kotlin.concurrent.thread
 
 
 class BusStation: AppCompatActivity() {
@@ -41,7 +42,6 @@ class BusStation: AppCompatActivity() {
         queue = Volley.newRequestQueue(applicationContext)
 
         val url ="http://api.gwangju.go.kr/json/arriveInfo?serviceKey=AXQzbuMmvQ3Bo0XkEZT2RYIcSjbGEbBiWHFW7LRA1OZwV8bBrxsSwRKnlDtTOYTmyVkv0RugCI%2FPEhDwECi%2FVQ%3D%3D&BUSSTOP_ID=191"
-
 
             request = StringRequest(
                 Request.Method.GET,
@@ -101,8 +101,17 @@ class BusStation: AppCompatActivity() {
                 {error -> }
             )
             request.setShouldCache(false)
-            queue.add(request)
 
+        ////// 실시간으로 api받아오기 근데 오류가 있음! 밑으로 계속 생김! 중복 없애야 함!
+
+        thread(start = true) {
+            while(true){
+                queue.add(request)
+                Thread.sleep(1000)
+            }
+        }
+
+        /////////////////
 
 
 
@@ -117,7 +126,6 @@ class BusStation: AppCompatActivity() {
 
 
     }
-
 
 
     }
