@@ -74,7 +74,7 @@ class BusStation: AppCompatActivity() {
                         // 버스명
                         val bsLineName = bus.getString("LINE_NAME")
                         // 버스 방향
-                        val bsNextBusStop = "db"
+                        val bsNextBusStop = "방향"
                         // 첫 번째 - 남은 시간
                         val bsRemainMin1 = bus.getString("REMAIN_MIN")
                         // 첫 번째 - 남은 정류소 개수
@@ -92,7 +92,7 @@ class BusStation: AppCompatActivity() {
 
 
                         // BusStationVO에 데이터 추가
-                        data.add(BusStationVO(R.drawable.star_on,bsLineName,bsNextBusStop, bsRemainMin1
+                        data.add(BusStationVO(R.drawable.star_bus,bsLineName,bsNextBusStop, bsRemainMin1
                             , bsRemainStop1,bsConfusion1,bsRemainMin2,  bsRemainStop2
                             ,bsConfusion2, R.drawable.ridebell))
                     }

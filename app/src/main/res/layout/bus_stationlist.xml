@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="90dp"
+    android:layout_height="75dp"
     android:background="#E31C1C"
     android:backgroundTint="#FFFFFF"
     tools:context=".MainActivity">
@@ -19,39 +19,25 @@
         app:layout_constraintGuide_end="-14dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.38" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
+        app:layout_constraintGuide_begin="38dp" />
 
     <TextView
         android:id="@+id/tvBSLineKind"
-        android:layout_width="106dp"
+        android:layout_width="89dp"
         android:layout_height="26dp"
+        android:layout_marginStart="8dp"
         android:gravity="center"
         android:text="textView"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        android:textStyle="normal"
+        android:textAlignment="textStart"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.58"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBS_bm"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -60,32 +46,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="14sp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvBSLineKind"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvBSLineKind"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <TextView
         android:id="@+id/tvBSRemainMin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="84dp"
+        android:text="Text"
         android:textColor="#CC000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/tvBSLineKind"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <TextView
         android:id="@+id/tvBSRemainStop1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin1"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin1"
@@ -93,34 +83,37 @@
 
     <TextView
         android:id="@+id/tvBSConfusion1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop1"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop1"
-        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop1" />
 
     <TextView
         android:id="@+id/tvBSRemainMin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Text"
         android:textColor="#CC000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/tvBSRemainMin1"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <TextView
         android:id="@+id/tvBSRemainStop2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin2"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin2"
@@ -128,37 +121,30 @@
 
     <TextView
         android:id="@+id/tvBSConfusion2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="39dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop2"
-        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop2" />
+        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/imgBS_rb"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvBSConfusion1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ridebell" />
-
-    <ImageButton
-        android:id="@+id/imgBS_bm"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487"
-        app:srcCompat="@drawable/star_bus" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -168,6 +154,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgBS_bm"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        app:srcCompat="@drawable/star_bus" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="370dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="218dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
