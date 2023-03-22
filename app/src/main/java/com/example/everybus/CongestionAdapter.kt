@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.everybus.R
 
 class CongestionAdapter(var context: Context, var data: ArrayList<CongestionVO>) : RecyclerView.Adapter<CongestionAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
