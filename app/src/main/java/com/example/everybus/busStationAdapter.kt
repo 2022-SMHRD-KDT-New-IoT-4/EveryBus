@@ -14,40 +14,32 @@ import androidx.recyclerview.widget.RecyclerView
 
 class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     RecyclerView.Adapter<busStationAdapter.ViewHolder>() {
-
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         // 즐겨찾기 이미지
         val imgBS_bm : ImageButton
         //  버스 노선, 버스명 , 버스 방향
         val BSLineKind  : TextView
-        val BSLineName  : TextView
         val BSNextBusStop : TextView
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
         val BSRemainMin1 : TextView
         val BSRemainStop1 : TextView
         val BSConfusion1  : TextView
-
         // 곧 도착 버스 승차벨 이미지
         val imgBS_rb : ImageButton
-
 
         init {
             // 즐겨찾기 이미지
             imgBS_bm = view.findViewById(R.id.imgBS_bm)
             //  버스명 , 버스 방향
             BSLineKind = view.findViewById(R.id.tvBSLineKind)
-            BSLineName = view.findViewById(R.id.tvBSLineKind)
             BSNextBusStop = view.findViewById(R.id.tvBSNextBusStop)
             // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
             BSRemainMin1 = view.findViewById(R.id.tvBSRemainMin1)
             BSRemainStop1 = view.findViewById(R.id.tvBSRemainStop1)
             BSConfusion1  = view.findViewById(R.id.tvBSConfusion1)
-
             // 곧 도착 버스 승차벨 이미지
             imgBS_rb = view.findViewById(R.id.imgBS_rb)
-
         }
-
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var inflater = LayoutInflater.from(context)
@@ -62,17 +54,10 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 즐겨찾기 이미지
         holder.imgBS_bm.setImageResource(data[position].imgBS_bm)
-
         //  버스명 , 버스 방향
-        holder.BSLineKind.setText(data[position].BSLineKind)
+        holder.BSLineKind.setText(data[position].bsLineName)
+        Log.d("버스 종류", holder.BSLineKind.text.toString())
 
-        val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
-
-        for (i in 0..busC.size+1){
-            if(holder.BSLineKind.equals((i+1).toString())){
-                holder.BSLineKind.setBackgroundColor(Color.parseColor(busC[i]))
-            }
-        }
         holder.BSNextBusStop.setText(data[position].BSNextBusStop)
 
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
@@ -83,6 +68,11 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
 
         // 곧 도착 버스 승차벨 이미지
         holder.imgBS_rb.setImageResource(data[position].imgBS_rb)
+
+        val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
+        var colorPosition = 0
+        Log.d("버스 종류 리스트", data[position].bsLineKind)
+        holder.BSLineKind.setTextColor(Color.parseColor(busC[data[position].bsLineKind.toInt()-1]))
 
 //        //MyPrefs 라는 이름의 SharedPreferences 인스턴스
 //        val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
