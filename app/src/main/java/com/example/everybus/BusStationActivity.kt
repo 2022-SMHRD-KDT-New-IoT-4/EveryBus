@@ -115,6 +115,8 @@ class BusStationActivity: AppCompatActivity() {
         //rcStation.layoutManager = GridLayoutManager(this,1)
 
 
+        queue.add(request)
+
     }
 
 
