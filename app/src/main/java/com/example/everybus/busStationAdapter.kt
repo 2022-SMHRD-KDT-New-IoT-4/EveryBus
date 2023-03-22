@@ -61,8 +61,8 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
         holder.BSNextBusStop.setText(data[position].BSNextBusStop)
 
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
-        holder.BSRemainMin1.setText(data[position].BSRemainMin1)
-        holder.BSRemainStop1.setText(data[position].BSRemainStop1)
+        holder.BSRemainMin1.setText("약 "+data[position].BSRemainMin1+"분")
+        holder.BSRemainStop1.setText(data[position].BSRemainStop1+"번째")
         holder.BSConfusion1.setText(data[position].BSConfusion1)
 
 

@@ -20,7 +20,7 @@ class StationSearchAdapter(val context: Context, val data: ArrayList<StationSear
         init {
             tvTitleSr = view.findViewById(R.id.tvTitleSr)
             tvSubSr = view.findViewById(R.id.tvSubSr)
-            tvNumberSr = view.findViewById(R.id.tvSubSr)
+            tvNumberSr = view.findViewById(R.id.tvNumSr)
             imgStarSr= view.findViewById(R.id.imgStarSr)
         }
 
@@ -30,16 +30,15 @@ class StationSearchAdapter(val context: Context, val data: ArrayList<StationSear
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StationSearchAdapter.ViewHolder {
         val inflater = LayoutInflater.from(context)
-
         var view = inflater.inflate(R.layout.stationlist, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: StationSearchAdapter.ViewHolder, position: Int) {
 
-        holder.tvTitleSr.text=data[position].title
-        holder.tvSubSr.text=data[position].sub
-        holder.tvNumberSr.text=data[position].stationNum
+        holder.tvTitleSr.text = data[position].title
+        holder.tvSubSr.text = data[position].sub
+        holder.tvNumberSr.text = data[position].stationNum
 
 
 

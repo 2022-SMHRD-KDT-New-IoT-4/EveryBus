@@ -2,6 +2,8 @@ package com.example.everybus
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +24,6 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
         init {
             tvLineName = view.findViewById(R.id.tvName_2)
             tvLineKind = view.findViewById(R.id.tvName_2_sub)
-
             imgBookmark = view.findViewById(R.id.imgBookmark)
         }
     }
@@ -42,7 +43,11 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
         holder.tvLineKind.text = data[position].tvName_2_sub
         // 즐겨찾기 유무 아이콘
         holder.imgBookmark.setImageResource(data[position].img)
+        val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
 
+        if(holder.tvLineName.text.equals("수완03")) {
+            holder.tvLineName.setTextColor(Color.parseColor(busC[0]))
+        }
         // Bus_Search2 뷰 클릭 -> Bus_search3 이동
         val data = data[position]
 
