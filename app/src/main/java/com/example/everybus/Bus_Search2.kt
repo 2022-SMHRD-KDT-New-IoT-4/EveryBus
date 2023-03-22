@@ -20,11 +20,12 @@ class Bus_Search2 : AppCompatActivity(){
         var busList = ArrayList<BusSearchVO>()
 
         // 데이터 넣어주기
-        busList.add(BusSearchVO("송암 74", "금호모아아파트 방향", R.drawable.rightarrow))
+        busList.add(BusSearchVO("일곡28", "살레시오고/ 교통문화연수원 방향", R.drawable.rightarrow))
 
         rcClick.setOnClickListener {
             var intent = Intent( this@Bus_Search2,
-                Bus_Search2::class.java )
+                BusRouteActivity::class.java )
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
 
         }

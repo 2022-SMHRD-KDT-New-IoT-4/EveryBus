@@ -32,7 +32,7 @@ class BusRouteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_bus_route)
+        setContentView(R.layout.bus_route)
 
 
 
@@ -49,8 +49,8 @@ class BusRouteActivity : AppCompatActivity() {
         queue = Volley.newRequestQueue(applicationContext)
 
         val url = "http://59.3.122.229:8081/EveryBus/Route_Bus_info"
-        val routeUrl = "http://api.gwangju.go.kr/json/lineStationInfo?serviceKey=AXQzbuMmvQ3Bo0XkEZT2RYIcSjbGEbBiWHFW7LRA1OZwV8bBrxsSwRKnlDtTOYTmyVkv0RugCI%2FPEhDwECi%2FVQ%3D%3D&LINE_ID=1"
-        val busUrl = "http://api.gwangju.go.kr/json/busLocationInfo?LINE_ID=1"
+        val routeUrl = "http://api.gwangju.go.kr/json/lineStationInfo?serviceKey=AXQzbuMmvQ3Bo0XkEZT2RYIcSjbGEbBiWHFW7LRA1OZwV8bBrxsSwRKnlDtTOYTmyVkv0RugCI%2FPEhDwECi%2FVQ%3D%3D&LINE_ID=15"
+        val busUrl = "http://api.gwangju.go.kr/json/busLocationInfo?LINE_ID=15"
         // 상단 버스정보
         request1 = StringRequest(
             Request.Method.POST,
@@ -65,7 +65,7 @@ class BusRouteActivity : AppCompatActivity() {
                 val line_kind = response1.getString("line_kind").toString()
 
                 val lk:Array<String> = arrayOf("광주 급행 간선","광주 간선","광주 지선","광주 마을버스","광주 공항버스","지역버스")
-                val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
+                val busC:Array<String> = arrayOf("#FF6347","#FFC300","#04A80C","#04A80C","mainColor","#C0C0C0")
 
                 for (i in 0..lk.size+1){
                     if(line_kind.equals((i+1).toString())){
@@ -157,11 +157,11 @@ class BusRouteActivity : AppCompatActivity() {
                             // value
                             val busLoctionList = response2.getJSONArray("BUSLOCATION_LIST")
                             Log.d("buslocation", busLoctionList.toString())
-                            var busLocation = busLoctionList[1] as JSONObject
+                            var busLocation = busLoctionList[0] as JSONObject
                             Log.d("CURR_STOP_ID", busLocation.getString("CURR_STOP_ID"))
 
 
-
+                            var c = 0
                             for (i in 0 until busLoctionList.length()){
                                 busLocation = busLoctionList[i] as JSONObject
 
@@ -172,27 +172,18 @@ class BusRouteActivity : AppCompatActivity() {
                                 Log.d("busStop 요기야", busStop.toString())
 
 
+                                val con:Array<String> = arrayOf("매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유")
 
                                 for(j in 0 until busStop.size) {
-                                    //Log.d("j", j.toString())
+                                    Log.d("c", c.toString())
 
 
                                     if (busStop[j] == brCurrStopId) {
                                         Log.d("busst", busStop[j])
                                         busRouteList[j].imgRouteBus = R.drawable.bus_green
                                         busRouteList[j].tvBRBusId = brBusid
-                                        busRouteList[j].tvBRConfusion = null
-
-//                        busRouteList[j] to BusRouteVO(
-//                            0,
-//                            brBSName,
-//                            brBSId,
-//                            R.drawable.bus_green,
-//                            brBusid,
-//                            null
-//                        )
-
-
+                                        busRouteList[j].tvBRConfusion = con[c]
+                                        c=c+1
                                     }
                                 }}
                             val adapter = BusRouteAdapter(this, busRouteList)
@@ -223,10 +214,10 @@ class BusRouteActivity : AppCompatActivity() {
 
         /////////////////////// 버스 움직이기 위한 코드///////////////////
 
-        imgHome.setOnClickListener {
-            var intent = Intent(this@BusRouteActivity, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        imgHome.setOnClickListener {
+//            var intent = Intent(this@BusRouteActivity, MainActivity::class.java)
+//            startActivity(intent)
+//        }
 
 
         // 요청이 여러개면 캐시가 쌓인다! 그래서 캐시 메모리 정리하기!
