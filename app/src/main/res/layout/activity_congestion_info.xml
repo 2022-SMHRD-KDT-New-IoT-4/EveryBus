@@ -76,7 +76,7 @@
     <ImageButton
         android:id="@+id/btnCHome"
         android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_height="56dp"
         android:background="@null"
         android:padding="0dp"
         android:scaleType="centerInside"
@@ -92,4 +92,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="135dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/tvCNextBusstop"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/info" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/tvCNextBusstop"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:layout_constraintTop_toBottomOf="@+id/tvCNextBusstop"
+        app:layout_constraintVertical_bias="0.342"
+        app:srcCompat="@drawable/star_off" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="33dp"
+        android:layout_height="24dp"
+        android:text="정보"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="@+id/imageButton9"
+        app:layout_constraintTop_toTopOf="@+id/imageButton9"
+        app:layout_constraintVertical_bias="0.548" />
 </androidx.constraintlayout.widget.ConstraintLayout>
