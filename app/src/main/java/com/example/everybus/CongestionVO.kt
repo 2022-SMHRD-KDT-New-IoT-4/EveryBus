@@ -1,4 +1,4 @@
-package com.example.busmo
+package com.example.everybus
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonProperty

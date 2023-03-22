@@ -1,4 +1,4 @@
-package com.example.busmo
+package com.example.everybus
 
 import android.content.Context
 import android.graphics.Color

@@ -3,8 +3,8 @@ package com.example.everybus
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.busmo.CongestionInfoActivity
-import com.example.busmo.CongestionSearchActivity
+import com.example.everybus.CongestionInfoActivity
+import com.example.everybus.CongestionSearchActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
