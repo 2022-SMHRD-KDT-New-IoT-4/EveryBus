@@ -56,7 +56,9 @@ class BusSearchActivity : Fragment() {
 
         // 데이터 넣어주기
 //        busList.add(BusSearchVO_2("매월26", "어쩌고방향", R.drawable.star,R.drawable.rightarrow))
-        busList.add(BusSearchVO("매월26", "월드컵경기장 방향",R.drawable.star_bus_on))
+        busList.add(BusSearchVO("수완03", "광주 급행버스 ",R.drawable.star_bus_on))
+        busList.add(BusSearchVO("송암74", "광주 지선버스",R.drawable.star_bus))
+
 
         // 버스 Adapter
         val adapter = BusSearchAdapter(requireActivity().applicationContext, busList )
