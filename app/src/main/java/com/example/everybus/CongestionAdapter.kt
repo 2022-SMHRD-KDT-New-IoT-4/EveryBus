@@ -1,13 +1,11 @@
 package com.example.everybus
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.everybus.R
 
 class CongestionAdapter(var context: Context, var data: ArrayList<CongestionVO>) : RecyclerView.Adapter<CongestionAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -23,7 +21,7 @@ class CongestionAdapter(var context: Context, var data: ArrayList<CongestionVO>)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view
-        = LayoutInflater.from(context).inflate(R.layout.congestion_info_list, parent, false)
+        = LayoutInflater.from(context).inflate(R.layout.list_congestion_info, parent, false)
         return ViewHolder(view)
     }
 

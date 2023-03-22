@@ -30,16 +30,15 @@
         android:layout_width="89dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="textView"
         android:textAlignment="textStart"
         android:textColor="#F44336"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toEndOf="@+id/imgBS_bm"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvBSNextBusStop"
@@ -48,12 +47,10 @@
         android:text="TextView"
         android:textAlignment="viewStart"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvBSLineKind"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvBSLineKind"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBSLineKind" />
 
     <TextView
         android:id="@+id/tvBSRemainMin1"
@@ -70,24 +67,27 @@
         android:id="@+id/tvBSRemainStop1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/border_round"
-        android:text="Text"
+        android:padding="2dp"
+        android:paddingRight="4dp"
+        android:text="11번째전"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin1"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin1"
         app:layout_constraintTop_toTopOf="@+id/tvBSRemainMin1" />
 
     <TextView
         android:id="@+id/tvBSConfusion1"
-        android:layout_width="38dp"
-        android:layout_height="18dp"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
-        android:background="@drawable/border_round"
+        android:background="@drawable/congestion_info_blue"
         android:text="Text"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop1"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop1"
         app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop1" />

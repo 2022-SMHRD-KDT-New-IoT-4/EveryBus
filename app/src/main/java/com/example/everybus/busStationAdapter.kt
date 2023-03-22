@@ -43,7 +43,7 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(R.layout.bus_stationlist, parent, false)
+        var view = inflater.inflate(R.layout.list_bus_station, parent, false)
         return ViewHolder(view)
     }
 
@@ -62,7 +62,7 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
 
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
         holder.BSRemainMin1.setText("약 "+data[position].BSRemainMin1+"분")
-        holder.BSRemainStop1.setText(data[position].BSRemainStop1+"번째")
+        holder.BSRemainStop1.setText(data[position].BSRemainStop1+"번째 전")
         holder.BSConfusion1.setText(data[position].BSConfusion1)
 
 

@@ -16,7 +16,6 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.everybus.R
 import org.json.JSONArray
 
 
@@ -33,7 +32,7 @@ class CongestionSearchActivity : Fragment()  {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view = inflater.inflate(R.layout.fragment_search_congestion__activity, container, false)
+        var view = inflater.inflate(R.layout.fragment_congestion_search_activity, container, false)
 
         val etBusName = view.findViewById<AutoCompleteTextView>(R.id.etBusName)
         val etBusStop = view.findViewById<AutoCompleteTextView>(R.id.etBusstop)

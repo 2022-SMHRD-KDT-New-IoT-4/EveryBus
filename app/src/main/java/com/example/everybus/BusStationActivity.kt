@@ -1,6 +1,5 @@
 package com.example.everybus
 
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -12,7 +11,6 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
-import kotlin.concurrent.thread
 
 
 class BusStationActivity: AppCompatActivity() {
@@ -78,7 +76,7 @@ class BusStationActivity: AppCompatActivity() {
                         // 첫 번째 - 남은 정류소 개수
                         val bsRemainStop1 = bus.getString("REMAIN_STOP")
                         // 첫 번째 - 혼잡 정보
-                        val bsConfusion1 = "db"
+                        val bsConfusion1 = "보통"
 
                         // BusStationVO에 데이터 추가
                         data.add(BusStationVO(R.drawable.star_bus,bsLineKind,bsLineName,bsNextBusStop, bsRemainMin1

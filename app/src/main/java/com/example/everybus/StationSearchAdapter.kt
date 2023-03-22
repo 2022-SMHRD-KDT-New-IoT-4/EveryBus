@@ -30,7 +30,7 @@ class StationSearchAdapter(val context: Context, val data: ArrayList<StationSear
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StationSearchAdapter.ViewHolder {
         val inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(R.layout.stationlist, parent, false)
+        var view = inflater.inflate(R.layout.list_recent_search_station, parent, false)
         return ViewHolder(view)
     }
 

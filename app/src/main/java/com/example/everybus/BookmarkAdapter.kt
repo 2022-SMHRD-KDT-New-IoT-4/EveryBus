@@ -30,7 +30,7 @@ class BookmarkAdapter(val context: Context, val data: ArrayList<BookmarkVO>)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(context)
         // bookmark_list.xml : 즐겨찾기 목록
-        val view = inflater.inflate(R.layout.bookmark_list, parent, false)
+        val view = inflater.inflate(R.layout.list_bookmark, parent, false)
         return ViewHolder(view)
     }
 

@@ -35,7 +35,7 @@ class BusRouteAdapter(val context : Context, val data : ArrayList<BusRouteVO>)
 
     override fun onCreateViewHolder (parent: ViewGroup, viewType: Int): BusRouteAdapter.ViewHolder{
         val inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(R.layout.bus_route_list, parent, false)
+        var view = inflater.inflate(R.layout.list_bus_route, parent, false)
         return ViewHolder(view)
     }
 

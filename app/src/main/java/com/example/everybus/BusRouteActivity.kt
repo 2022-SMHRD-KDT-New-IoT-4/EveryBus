@@ -32,7 +32,7 @@ class BusRouteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.bus_route_list)
+        setContentView(R.layout.list_bus_route)
 
 
 
