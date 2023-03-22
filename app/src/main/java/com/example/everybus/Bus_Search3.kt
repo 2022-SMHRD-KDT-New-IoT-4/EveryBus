@@ -32,7 +32,7 @@ class Bus_Search3 : AppCompatActivity(){
 
         busStationRoute.setOnClickListener {
             var intent = Intent(this@Bus_Search3,
-            BusStation::class.java)
+            BusStationActivity::class.java)
             startActivity(intent)
         }
 

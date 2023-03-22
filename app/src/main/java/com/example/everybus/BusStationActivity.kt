@@ -14,7 +14,7 @@ import org.json.JSONObject
 import kotlin.concurrent.thread
 
 
-class BusStation: AppCompatActivity() {
+class BusStationActivity: AppCompatActivity() {
 
     lateinit var queue: RequestQueue
     lateinit var request: StringRequest

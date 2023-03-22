@@ -8,8 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-
 // bus_route.xml 을 위한 어댑터
 class BusRouteAdapter(val context : Context, val data : ArrayList<BusRouteVO>)
     :RecyclerView.Adapter<BusRouteAdapter.ViewHolder>(){
