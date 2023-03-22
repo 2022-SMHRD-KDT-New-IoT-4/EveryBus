@@ -8,9 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-
-// bus_route.xml 을 위한 어댑터
+// bus_route_list.xml 을 위한 어댑터
 class BusRouteAdapter(val context : Context, val data : ArrayList<BusRouteVO>)
     :RecyclerView.Adapter<BusRouteAdapter.ViewHolder>(){
 
@@ -20,18 +18,24 @@ class BusRouteAdapter(val context : Context, val data : ArrayList<BusRouteVO>)
         val tvStation_subT : TextView
         val tvStation_Num : TextView
         val imgRouteBus : ImageView
+        var tvBRBusId : TextView
+        var tvBRConfusion : TextView
+
         init {
             imgRoute = view.findViewById(R.id.imgRoute)
             tvStation_subT = view.findViewById(R.id.tvStation_subT)
             tvStation_Num = view.findViewById(R.id.tvStation_Num)
             imgRouteBus= view.findViewById(R.id.imgRouteBus)
+            tvBRBusId = view.findViewById(R.id.tvBRBusId)
+            tvBRConfusion = view.findViewById(R.id.tvBRConfusion)
+
 
         }
     }
 
     override fun onCreateViewHolder (parent: ViewGroup, viewType: Int): BusRouteAdapter.ViewHolder{
         val inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(R.layout.bus_route, parent, false)
+        var view = inflater.inflate(R.layout.bus_route_list, parent, false)
         return ViewHolder(view)
     }
 
@@ -46,7 +50,10 @@ class BusRouteAdapter(val context : Context, val data : ArrayList<BusRouteVO>)
         holder.tvStation_Num.text = data[position].tvStation_Num
         // 버스 현위치 이미지
         holder.imgRouteBus.setImageResource(data[position].imgRouteBus)
-
+        // 버스 번호
+        holder.tvBRBusId.text = data[position].tvBRBusId
+        // 버스 혼잡도
+        holder.tvBRConfusion.text = data[position].tvBRConfusion
 
     }
 

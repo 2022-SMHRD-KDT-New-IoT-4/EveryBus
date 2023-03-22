@@ -60,18 +60,14 @@ class BusInfoActivity : AppCompatActivity() {
                         DirUpDown.text = StringBuilder(dir_up_name).append("~").append(dir_down_name)
                         // 무슨 종류? 간선 지선?
                         BusInfoLineKind.text = result.getString("LINE_KIND")
-                        if(result.getString("LINE_KIND").equals("1")){
-                            BusInfoLineKind.text = "급행 간선"
-                        }else if(result.getString("LINE_KIND").equals("2")){
-                            BusInfoLineKind.text = "간선"
-                        }else if(result.getString("LINE_KIND").equals("3")){
-                            BusInfoLineKind.text = "지선"
-                        }else if(result.getString("LINE_KIND").equals("4")){
-                            BusInfoLineKind.text = "마을버스"
-                        }else if(result.getString("LINE_KIND").equals("5")){
-                            BusInfoLineKind.text = "공항버스"
-                        }else if(result.getString("LINE_KIND").equals("6")){
-                            BusInfoLineKind.text = "지역버스"
+                        // Line Kind 코드 간결화를 위한 array
+                        //val lk:Array<String> = arrayOf("1","2","3","4","5")
+                        val lk:Array<String> = arrayOf("광주 급행 간선","광주 간선","광주 지선","광주 마을버스","광주 공항버스","지역버스")
+
+                        for (i in 1 .. lk.size+1){
+                            if(result.getString("LINE_KIND").equals(i.toString())){
+                                BusInfoLineKind.text = lk[i]
+                            }
                         }
 
                         // 첫차,막차

@@ -59,14 +59,12 @@
         android:id="@+id/tvBSRemainMin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
         android:text="Text"
         android:textColor="#CC000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toEndOf="@+id/tvBSLineKind"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvBSRemainStop1"
@@ -93,46 +91,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop1"
         app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop1"
         app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop1" />
-
-    <TextView
-        android:id="@+id/tvBSRemainMin2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Text"
-        android:textColor="#CC000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvBSRemainMin1"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.066" />
-
-    <TextView
-        android:id="@+id/tvBSRemainStop2"
-        android:layout_width="38dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/border_round"
-        android:text="Text"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainMin2"
-        app:layout_constraintStart_toEndOf="@+id/tvBSRemainMin2"
-        app:layout_constraintTop_toTopOf="@+id/tvBSRemainMin2" />
-
-    <TextView
-        android:id="@+id/tvBSConfusion2"
-        android:layout_width="39dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/border_round"
-        android:text="Text"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBSRemainStop2"
-        app:layout_constraintStart_toEndOf="@+id/tvBSRemainStop2"
-        app:layout_constraintTop_toTopOf="@+id/tvBSRemainStop2"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/imgBS_rb"

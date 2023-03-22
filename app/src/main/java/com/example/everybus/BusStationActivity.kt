@@ -1,5 +1,6 @@
 package com.example.everybus
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -11,9 +12,10 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
+import kotlin.concurrent.thread
 
 
-class BusStation: AppCompatActivity() {
+class BusStationActivity: AppCompatActivity() {
 
     lateinit var queue: RequestQueue
     lateinit var request: StringRequest
@@ -31,6 +33,7 @@ class BusStation: AppCompatActivity() {
         var tvRoute1 = findViewById<TextView>(R.id.tvRoute1)
 
 
+
         val data = ArrayList<BusStationVO>()
 
 
@@ -41,7 +44,6 @@ class BusStation: AppCompatActivity() {
         queue = Volley.newRequestQueue(applicationContext)
 
         val url ="http://api.gwangju.go.kr/json/arriveInfo?serviceKey=AXQzbuMmvQ3Bo0XkEZT2RYIcSjbGEbBiWHFW7LRA1OZwV8bBrxsSwRKnlDtTOYTmyVkv0RugCI%2FPEhDwECi%2FVQ%3D%3D&BUSSTOP_ID=191"
-
 
             request = StringRequest(
                 Request.Method.GET,
@@ -82,27 +84,34 @@ class BusStation: AppCompatActivity() {
                         // 첫 번째 - 혼잡 정보
                         val bsConfusion1 = "db"
 
-                        // 두 번째 - 남은 시간
-                        val bsRemainMin2 = bus.getString("REMAIN_MIN")
-                        // 두 번째 - 남은 정류소 개수
-                        val bsRemainStop2 = bus.getString("REMAIN_STOP")
-                        // 두 번째 - 혼잡 정보
-                        val bsConfusion2 = "db"
+
+
+
+
+
 
 
 
                         // BusStationVO에 데이터 추가
-                        data.add(BusStationVO(R.drawable.star_bus,bsLineName,bsNextBusStop, bsRemainMin1
-                            , bsRemainStop1,bsConfusion1,bsRemainMin2,  bsRemainStop2
-                            ,bsConfusion2, R.drawable.ridebell))
+                        data.add(BusStationVO(R.drawable.star_bus,bsLineKind,bsLineName,bsNextBusStop, bsRemainMin1
+                            ,bsRemainStop1,bsConfusion1, R.drawable.ridebell))
                     }
                     adapter.notifyDataSetChanged()
                 },
                 {error -> }
             )
             request.setShouldCache(false)
-            queue.add(request)
 
+        ////// 실시간으로 api받아오기 근데 오류가 있음! 밑으로 계속 생김! 중복 없애야 함!
+
+//        thread(start = true) {
+//            while(true){
+//                queue.add(request)
+//                Thread.sleep(1000)
+//            }
+//        }
+
+        /////////////////
 
 
 
@@ -117,7 +126,6 @@ class BusStation: AppCompatActivity() {
 
 
     }
-
 
 
     }

@@ -39,7 +39,7 @@ class StationSearch : Fragment() {
         rcStation.layoutManager = LinearLayoutManager(this.context)
 
         etStation.setOnClickListener {
-            val intent = Intent(activity, BusStation::class.java)
+            val intent = Intent(activity, BusStationActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }

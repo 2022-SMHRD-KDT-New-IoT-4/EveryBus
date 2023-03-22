@@ -47,7 +47,7 @@ class BusSearchAdapter(val context: Context, val data: ArrayList<BusSearchVO>)
         val data = data[position]
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, Bus_Search3::class.java).apply{
+            val intent = Intent(context, BusRouteActivity::class.java).apply{
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
             }
             context.startActivity(intent)
