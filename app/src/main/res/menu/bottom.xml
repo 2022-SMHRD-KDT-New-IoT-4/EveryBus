@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/tap_bookmark"
+        android:id="@+id/tab_bookmark"
         android:icon="@drawable/star"
         android:title="즐겨찾기" />
 
     <item
-        android:id="@+id/tap_busSearch"
+        android:id="@+id/tab_busSearch"
         android:icon="@drawable/bus"
         android:title="버스 검색" />
 
     <item
-        android:id="@+id/tap_stationSearch"
+        android:id="@+id/tab_stationSearch"
         android:icon="@drawable/station"
         android:title="정류장 검색" />
 

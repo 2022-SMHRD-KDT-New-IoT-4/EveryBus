@@ -3,6 +3,8 @@ package com.example.everybus
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.busmo.CongestionInfoActivity
+import com.example.busmo.CongestionSearchActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -24,25 +26,29 @@ class MainActivity : AppCompatActivity() {
 
         // 하단바 버튼 클릭
         bnv.setOnItemSelectedListener { item ->
-            if (item.itemId == R.id.tap_bookmark){
+            if (item.itemId == R.id.tab_bookmark){
                 // 즐겨찾기 화면
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fl,
                     BookmarkActivity()
                 ).commit()
-            }else if(item.itemId == R.id.tap_busSearch){
+            }else if(item.itemId == R.id.tab_busSearch){
                 // 버스 검색 화면
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fl,
                     BusSearchActivity()
                 ).commit()
-            }else if(item.itemId==R.id.tap_stationSearch){
+            }else if(item.itemId==R.id.tab_stationSearch){
+                // 정류장 검색 화면
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fl,
                     StationSearch()
                 ).commit()
-
-
+            }else if (item.itemId == R.id.tab_busy){
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fl,
+                    CongestionSearchActivity()
+                ).commit()
             }
 
             true
