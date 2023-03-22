@@ -1,20 +1,18 @@
 package com.example.everybus
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageButton
-import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
@@ -34,7 +32,7 @@ class BusRouteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.bus_route)
+        setContentView(R.layout.bus_route_list)
 
 
 
@@ -225,7 +223,10 @@ class BusRouteActivity : AppCompatActivity() {
 
         /////////////////////// 버스 움직이기 위한 코드///////////////////
 
-
+        imgHome.setOnClickListener {
+            var intent = Intent(this@BusRouteActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
 
 
         // 요청이 여러개면 캐시가 쌓인다! 그래서 캐시 메모리 정리하기!

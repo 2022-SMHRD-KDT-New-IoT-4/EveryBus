@@ -26,10 +26,6 @@
             android:exported="false">
         </activity>
 
-        <activity
-            android:name=".Bus_Search3"
-            android:exported="false">
-        </activity>
 
         <activity
             android:name=".SplashActivity"

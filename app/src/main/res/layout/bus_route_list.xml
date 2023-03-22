@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+    <!-- 시작점 이미지 : star_arrow.png
+         그 이후 이미지 : arrow.png      -->
+
+    <ImageView
+        android:id="@+id/imgRoute"
+        android:layout_width="20dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/start_arrow"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/tvStation_subT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imgRoute"
+        app:layout_constraintTop_toTopOf="@+id/imgRoute" />
+
+    <TextView
+        android:id="@+id/tvStation_Num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRoute"
+        app:layout_constraintEnd_toEndOf="@+id/tvStation_subT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvStation_subT"
+        app:layout_constraintTop_toBottomOf="@+id/tvStation_subT"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgRouteBus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRoute"
+        app:layout_constraintEnd_toEndOf="@+id/imgRoute"
+        app:layout_constraintStart_toStartOf="@+id/imgRoute"
+        app:layout_constraintTop_toTopOf="@+id/imgRoute" />
+
+    <TextView
+        android:id="@+id/tvBRBusId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgRoute"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgRoute" />
+
+    <TextView
+        android:id="@+id/tvBRConfusion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/border_round"
+        android:text="Text"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRoute"
+        app:layout_constraintEnd_toEndOf="@+id/tvBRBusId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvBRBusId"
+        app:layout_constraintTop_toBottomOf="@+id/tvBRBusId"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

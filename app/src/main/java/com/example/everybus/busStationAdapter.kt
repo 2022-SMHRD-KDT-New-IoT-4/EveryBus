@@ -1,6 +1,7 @@
 package com.example.everybus
 
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -17,17 +18,15 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         // 즐겨찾기 이미지
         val imgBS_bm : ImageButton
-        //  버스명 , 버스 방향
+        //  버스 노선, 버스명 , 버스 방향
         val BSLineKind  : TextView
+        val BSLineName  : TextView
         val BSNextBusStop : TextView
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
         val BSRemainMin1 : TextView
         val BSRemainStop1 : TextView
         val BSConfusion1  : TextView
-        // 2번 째로 빨리 오는 버스 정보
-        val BSRemainMin2 : TextView
-        val BSRemainStop2  : TextView
-        val BSConfusion2 : TextView
+
         // 곧 도착 버스 승차벨 이미지
         val imgBS_rb : ImageButton
 
@@ -37,15 +36,13 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
             imgBS_bm = view.findViewById(R.id.imgBS_bm)
             //  버스명 , 버스 방향
             BSLineKind = view.findViewById(R.id.tvBSLineKind)
+            BSLineName = view.findViewById(R.id.tvBSLineKind)
             BSNextBusStop = view.findViewById(R.id.tvBSNextBusStop)
             // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
             BSRemainMin1 = view.findViewById(R.id.tvBSRemainMin1)
             BSRemainStop1 = view.findViewById(R.id.tvBSRemainStop1)
             BSConfusion1  = view.findViewById(R.id.tvBSConfusion1)
-            // 2번 째로 빨리 오는 버스 정보
-            BSRemainMin2 = view.findViewById(R.id.tvBSRemainMin2)
-            BSRemainStop2 = view.findViewById(R.id.tvBSRemainStop2)
-            BSConfusion2 = view.findViewById(R.id.tvBSConfusion2)
+
             // 곧 도착 버스 승차벨 이미지
             imgBS_rb = view.findViewById(R.id.imgBS_rb)
 
@@ -68,6 +65,14 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
 
         //  버스명 , 버스 방향
         holder.BSLineKind.setText(data[position].BSLineKind)
+
+        val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
+
+        for (i in 0..busC.size+1){
+            if(holder.BSLineKind.equals((i+1).toString())){
+                holder.BSLineKind.setBackgroundColor(Color.parseColor(busC[i]))
+            }
+        }
         holder.BSNextBusStop.setText(data[position].BSNextBusStop)
 
         // 곧 도착 버스 시간정보, 몇 번째 정거장, 혼잡정보
@@ -75,10 +80,6 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
         holder.BSRemainStop1.setText(data[position].BSRemainStop1)
         holder.BSConfusion1.setText(data[position].BSConfusion1)
 
-        // 2번 째로 빨리 오는 버스 정보
-        holder.BSRemainMin2.setText(data[position].BSRemainMin2)
-        holder.BSRemainStop2.setText(data[position].BSRemainStop2)
-        holder.BSConfusion2.setText(data[position].BSConfusion2)
 
         // 곧 도착 버스 승차벨 이미지
         holder.imgBS_rb.setImageResource(data[position].imgBS_rb)

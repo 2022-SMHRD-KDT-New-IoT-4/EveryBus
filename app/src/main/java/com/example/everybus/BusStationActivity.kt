@@ -1,5 +1,6 @@
 package com.example.everybus
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -30,6 +31,7 @@ class BusStationActivity: AppCompatActivity() {
         var tvBusId = findViewById<TextView>(R.id.tvBusId)
         var tvStopName = findViewById<TextView>(R.id.tvStopName)
         var tvRoute1 = findViewById<TextView>(R.id.tvRoute1)
+
 
 
         val data = ArrayList<BusStationVO>()
@@ -82,19 +84,17 @@ class BusStationActivity: AppCompatActivity() {
                         // 첫 번째 - 혼잡 정보
                         val bsConfusion1 = "db"
 
-                        // 두 번째 - 남은 시간
-                        val bsRemainMin2 = bus.getString("REMAIN_MIN")
-                        // 두 번째 - 남은 정류소 개수
-                        val bsRemainStop2 = bus.getString("REMAIN_STOP")
-                        // 두 번째 - 혼잡 정보
-                        val bsConfusion2 = "db"
+
+
+
+
+
 
 
 
                         // BusStationVO에 데이터 추가
-                        data.add(BusStationVO(R.drawable.star_bus,bsLineName,bsNextBusStop, bsRemainMin1
-                            , bsRemainStop1,bsConfusion1,bsRemainMin2,  bsRemainStop2
-                            ,bsConfusion2, R.drawable.ridebell))
+                        data.add(BusStationVO(R.drawable.star_bus,bsLineKind,bsLineName,bsNextBusStop, bsRemainMin1
+                            ,bsRemainStop1,bsConfusion1, R.drawable.ridebell))
                     }
                     adapter.notifyDataSetChanged()
                 },
@@ -104,12 +104,12 @@ class BusStationActivity: AppCompatActivity() {
 
         ////// 실시간으로 api받아오기 근데 오류가 있음! 밑으로 계속 생김! 중복 없애야 함!
 
-        thread(start = true) {
-            while(true){
-                queue.add(request)
-                Thread.sleep(1000)
-            }
-        }
+//        thread(start = true) {
+//            while(true){
+//                queue.add(request)
+//                Thread.sleep(1000)
+//            }
+//        }
 
         /////////////////
 
