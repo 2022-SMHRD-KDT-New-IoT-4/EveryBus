@@ -41,6 +41,7 @@ class BookmarkAdapter(val context: Context, val data: ArrayList<BookmarkVO>)
     }
 
     var click = false
+    var cnt = 0
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 버스&정류장 이름
         holder.tvName.text = data[position].Name
@@ -54,13 +55,11 @@ class BookmarkAdapter(val context: Context, val data: ArrayList<BookmarkVO>)
         holder.img2.setImageResource(data[position].img_2)
 
         holder.img2.setOnClickListener{
-            click = true
-            if(click){
-                holder.img2.setImageResource(R.drawable.redridebell)
-
+            cnt++
+            if(cnt%2==1){
+                holder.img2.setImageResource(R.drawable.yellowridebell)
             }else{
                 holder.img2.setImageResource(R.drawable.ridebell)
-
             }
 
         }
