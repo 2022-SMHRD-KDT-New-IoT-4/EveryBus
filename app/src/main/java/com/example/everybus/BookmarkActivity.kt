@@ -28,8 +28,8 @@ class BookmarkActivity : Fragment() {
 
 
        // 데이터 넣어주기
-       bookmarkList.add(BookmarkVO(R.drawable.bus,"송암74","동명회,송원고방면",R.drawable.ridebell))
-       bookmarkList.add(BookmarkVO(R.drawable.station, "송원대학교","", R.drawable.burger))
+       bookmarkList.add(BookmarkVO(R.drawable.bus,"일곡28","광주 간선버스","교통문화연수원 방향",R.drawable.ridebell))
+       bookmarkList.add(BookmarkVO(R.drawable.station, "송원대","송암공단입구 방면","", R.drawable.burger))
 
       // 즐겨찾기 Adapter
        val adapter = BookmarkAdapter(requireActivity().applicationContext,bookmarkList)

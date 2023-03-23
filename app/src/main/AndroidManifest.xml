@@ -47,6 +47,10 @@
             android:name=".CongestionInfoActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".BusRouteActivity"
+            android:exported="true">
+        </activity>
 
 
 

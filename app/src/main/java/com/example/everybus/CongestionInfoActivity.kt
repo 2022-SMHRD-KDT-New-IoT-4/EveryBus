@@ -15,8 +15,8 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.everybus.R
-import com.fasterxml.jackson.databind.ObjectMapper
 import org.json.JSONArray
+import com.fasterxml.jackson.databind.ObjectMapper
 
 
 class CongestionInfoActivity : AppCompatActivity(){
@@ -39,7 +39,7 @@ class CongestionInfoActivity : AppCompatActivity(){
         val btnCHome = findViewById<ImageButton>(R.id.btnCHome)
         val btnCBack = findViewById<ImageButton>(R.id.btnCBack)
 
-        val spf = this.getSharedPreferences("SPF", Context.MODE_PRIVATE)
+        val spf = this.getSharedPreferences("SPF", MODE_PRIVATE)
 
         val hour = spf.getString("hour", "00")
         val min = spf.getString("min", "00")
