@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+import com.google.gson.Gson
 
 
 class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
@@ -70,73 +70,92 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
         holder.imgBS_rb.setImageResource(data[position].imgBS_rb)
 
         val busC:Array<String> = arrayOf("#FF6347","#FFD700","#04A80C","#04A80C","mainColor","#C0C0C0")
+        val Con:Array<String> = arrayOf("보통","여유","혼잡","매우 혼잡")
         var colorPosition = 0
         Log.d("버스 종류 리스트", data[position].bsLineKind)
         holder.BSLineKind.setTextColor(Color.parseColor(busC[data[position].bsLineKind.toInt()-1]))
+        holder.BSConfusion1.setText((Con[data[position].bsLineKind.toInt()-1]))
+        if(holder.BSConfusion1.text.equals("여유")){
+            holder.BSConfusion1.setBackgroundResource(R.drawable.congestion_info_green)
+        }else if(holder.BSConfusion1.text.equals("보통")){
+            holder.BSConfusion1.setBackgroundResource(R.drawable.congestion_info_blue)
+        }else if(holder.BSConfusion1.text.equals("혼잡")){
+            holder.BSConfusion1.setBackgroundResource(R.drawable.congestion_info_yellow)
+        }else{
+            holder.BSConfusion1.setBackgroundResource(R.drawable.congestion_info_red)
+        }
 
 //        //MyPrefs 라는 이름의 SharedPreferences 인스턴스
-//        val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-//
-//        val key = "favorite_" + holder.BSLineKind.text.toString()
-//        val info = "businfo" + holder.BSLineKind.text.toString() + holder.BSNextBusStop.text.toString()
-//        var isFavorite = sharedPreferences.getBoolean(key, false)
-//
-//        // 즐겨찾기 버튼 클릭 이벤트 처리
-//
-//        holder.imgBS_bm.setOnClickListener {
-//
-//            isFavorite = !isFavorite
-//            val editor = sharedPreferences.edit()
-//            //holder.tvSub.text.toString()) 를 호출하여 현재 아이템의 정보를 담은 BusStationVO 객체를 생성
-//            val busInfo = busLike(holder.BSLineKind.text.toString(), holder.BSNextBusStop.text.toString())
-//            val gson = Gson()
-//            val json = gson.toJson(busInfo)
-//
-//            val busInfoList = mutableListOf<BusStationVO>()
-//            for (key in sharedPreferences.all.keys) {
-//                if (key.startsWith("businfo")) {
-//                    val savedJson = sharedPreferences.getString(key, null)
-//                    if (savedJson != null) {
-//                        val gson = Gson()
-//                        val busInfo = gson.fromJson(savedJson, BusStationVO::class.java)
-//                        busInfoList.add(busInfo)
-//                    }
-//                }
-//            }
-//
-//            editor.putBoolean(key, !isFavorite)
-//            //즐겨찾기가 되어 있는 상태에서 한번더 누르면 삭제 코드 인데 안됨
-//
-//            if (isFavorite) {
-//                editor.putString(info, json)
-//            } else {
-//                editor.remove(info)
-//            }
-//            //SharedPreferences 에 info,json 저장
-//            editor.putString(info, json)
-//            //변경사항 저장
-//            editor.apply()
-//            Log.d("List", gson.toJson(busInfoList))
-//
-//            // 버튼 상태 변경
-//
-//            if (isFavorite) {
-//                holder.imgBS_bm.setImageResource(R.drawable.star_bus_on)
+        val sharedPreferences = context.getSharedPreferences("SPF", Context.MODE_PRIVATE)
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        val key = "favorite_" + holder.BSLineKind.text.toString()
+        val info = "businfo" + holder.BSLineKind.text.toString() + holder.BSNextBusStop.text.toString()
+        var isFavorite = sharedPreferences.getBoolean(key, false)
+
+        // 즐겨찾기 버튼 클릭 이벤트 처리
+
+        holder.imgBS_bm.setOnClickListener {
+
+            isFavorite = !isFavorite
+            val editor = sharedPreferences.edit()
+            //holder.tvSub.text.toString()) 를 호출하여 현재 아이템의 정보를 담은 BusStationVO 객체를 생성
+            val busInfo = busLike(holder.BSLineKind.text.toString(), holder.BSNextBusStop.text.toString())
+            val gson = Gson()
+            val json = gson.toJson(busInfo)
+
+            val busInfoList = mutableListOf<BusStationVO>()
+            for (key in sharedPreferences.all.keys) {
+                if (key.startsWith("businfo")) {
+                    val savedJson = sharedPreferences.getString(key, null)
+                    if (savedJson != null) {
+                        val gson = Gson()
+                        val busInfo = gson.fromJson(savedJson, BusStationVO::class.java)
+                        busInfoList.add(busInfo)
+                    }
+                }
+            }
+
+            editor.putBoolean(key, !isFavorite)
+            //즐겨찾기가 되어 있는 상태에서 한번더 누르면 삭제 코드 인데 안됨
+
+            if (isFavorite) {
+                editor.putString(info, json)
+            } else {
+                editor.remove(info)
+            }
+            //SharedPreferences 에 info,json 저장
+            editor.putString(info, json)
+            //변경사항 저장
+            editor.apply()
+            Log.d("List", gson.toJson(busInfoList))
+
+            // 버튼 상태 변경
+            if (isFavorite) {
+                holder.imgBS_bm.setImageResource(R.drawable.star_bus_on)
+            } else {
+                holder.imgBS_bm.setImageResource(R.drawable.star_bus)
+            }
+
+            val savedJson = sharedPreferences.getString(info, null)
+            if (savedJson != null) {
+                val gson = Gson()
+                val busInfo = gson.fromJson(savedJson, busInfo::class.java)
+                holder.BSLineKind.text = busInfo.title
+                holder.BSNextBusStop.text = busInfo.sub
+            }
+
+
+        }
+
+//        var istrue : Boolean
+//        holder.imgBS_rb.setOnClickListener {
+//            if (istrue) {
+//                holder.imgBS_bm.setImageResource(R.drawable.)
 //            } else {
 //                holder.imgBS_bm.setImageResource(R.drawable.star_bus)
 //            }
-//
-//            val savedJson = sharedPreferences.getString(info, null)
-//            if (savedJson != null) {
-//                val gson = Gson()
-//                val busInfo = gson.fromJson(savedJson, busInfo::class.java)
-//                holder.BSLineKind.text = busInfo.title
-//                holder.BSNextBusStop.text = busInfo.sub
-//            }
-//
-//
 //        }
-
     }
 }
 

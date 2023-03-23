@@ -2,6 +2,7 @@ package com.example.everybus
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,7 +30,7 @@ class BusStationActivity: AppCompatActivity() {
         var tvBusId = findViewById<TextView>(R.id.tvBusId)
         var tvStopName = findViewById<TextView>(R.id.tvStopName)
         var tvRoute1 = findViewById<TextView>(R.id.tvRoute1)
-
+        var imgBtnStar = findViewById<ImageButton>(R.id.imgBS_bm)
 
 
         val data = ArrayList<BusStationVO>()
@@ -112,8 +113,18 @@ class BusStationActivity: AppCompatActivity() {
         rcStation.layoutManager = layoutManager
         //rcStation.layoutManager = GridLayoutManager(this,1)
 
+//        var isShine = false
+//        imgBtnStar.setOnClickListener{
+//            if(isShine){
+//                imgBtnStar.setImageResource(R.drawable.star_bus)
+//            }else{
+//                imgBtnStar.setImageResource(R.drawable.star_bus_on)
+//            }
+//        }
 
         queue.add(request)
+
+
 
     }
 
