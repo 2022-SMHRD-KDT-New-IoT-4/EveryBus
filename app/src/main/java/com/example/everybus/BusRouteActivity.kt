@@ -58,9 +58,9 @@ class BusRouteActivity : AppCompatActivity() {
             // 응답에 성공했을 때 Listener
             { response ->
                 val response1 = JSONObject(response)
-                Log.d("jsonTest",response1.toString())
+                //Log.d("jsonTest",response1.toString())
 
-                Log.d("line_id",response1.getString("line_id").toString())
+                //Log.d("line_id",response1.getString("line_id").toString())
 
                 val line_kind = response1.getString("line_kind").toString()
 
@@ -116,12 +116,12 @@ class BusRouteActivity : AppCompatActivity() {
             { response ->
                 // key
                 val response1 = JSONObject(response)
-                Log.d("response1",response1.toString())
+              //  Log.d("response1",response1.toString())
                 // value
                 val busList = response1.getJSONArray("BUSSTOP_LIST")
-                Log.d("bus", busList.toString())
+                //Log.d("bus", busList.toString())
                 var bus = busList[1] as JSONObject
-                Log.d("bus", bus.getString("BUSSTOP_NAME"))
+               // Log.d("bus", bus.getString("BUSSTOP_NAME"))
 
 
 
@@ -136,7 +136,7 @@ class BusRouteActivity : AppCompatActivity() {
 
                     // 정류장 번호 배열로 저장하기
                     busStop.add(brBSId)
-                    Log.d("busstop", busStop.toString())
+                   // Log.d("busstop", busStop.toString())
                     // BusStationVO에 데이터 추가
                     // 시작노선이미지, 정류장명("BUSSTOP_NAME"), 정류장번호("BUSSTOP_ID"), 버스 현위치 이미지(imgRouteBus)
                     if(i == 0){
@@ -153,12 +153,12 @@ class BusRouteActivity : AppCompatActivity() {
                         { response ->
                             // key
                             val response2 = JSONObject(response)
-                            Log.d("response1",response2.toString())
+                            //Log.d("response1",response2.toString())
                             // value
                             val busLoctionList = response2.getJSONArray("BUSLOCATION_LIST")
-                            Log.d("buslocation", busLoctionList.toString())
+                           // Log.d("buslocation", busLoctionList.toString())
                             var busLocation = busLoctionList[0] as JSONObject
-                            Log.d("CURR_STOP_ID", busLocation.getString("CURR_STOP_ID"))
+                           // Log.d("CURR_STOP_ID", busLocation.getString("CURR_STOP_ID"))
 
 
                             var c = 0
@@ -168,18 +168,18 @@ class BusRouteActivity : AppCompatActivity() {
                                 val brBusid = busLocation.getString("BUS_ID")
                                 // 현재 정류장명("CURR_STOP_ID”)
                                 val brCurrStopId = busLocation.getString("CURR_STOP_ID")
-                                Log.d("brCurrStopId", brCurrStopId)
-                                Log.d("busStop 요기야", busStop.toString())
+                               // Log.d("brCurrStopId", brCurrStopId)
+                                //Log.d("busStop 요기야", busStop.toString())
 
 
-                                val con:Array<String> = arrayOf("매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유")
+                                val con:Array<String> = arrayOf("보통","매우혼잡","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유")
 
                                 for(j in 0 until busStop.size) {
-                                    Log.d("c", c.toString())
+                                   // Log.d("c", c.toString())
 
 
                                     if (busStop[j] == brCurrStopId) {
-                                        Log.d("busst", busStop[j])
+                                       // Log.d("busst", busStop[j])
                                         busRouteList[j].imgRouteBus = R.drawable.bus_green
                                         busRouteList[j].tvBRBusId = brBusid
                                         busRouteList[j].tvBRConfusion = con[c]
