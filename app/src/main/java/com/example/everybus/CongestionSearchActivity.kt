@@ -119,11 +119,11 @@ class CongestionSearchActivity : Fragment()  {
         val editor = spf?.edit()
 
         tp.setOnTimeChangedListener(OnTimeChangedListener { timePicker, hour, min ->
-            Toast.makeText(
-                getActivity(),
-                "hour : $hour, min : $min",
-                Toast.LENGTH_LONG
-            ).show()
+//            Toast.makeText(
+//                getActivity(),
+//                "hour : $hour, min : $min",
+//                Toast.LENGTH_LONG
+//            ).show()
 
             Log.d("tag4", hour.toString())
             Log.d("tag4", min.toString())
