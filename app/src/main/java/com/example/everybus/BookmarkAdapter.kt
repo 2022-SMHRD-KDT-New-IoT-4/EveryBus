@@ -79,25 +79,26 @@ class BookmarkAdapter(val context: Context, val data: ArrayList<BookmarkVO>, pri
             cnt++
             if(cnt%2==1){
                 holder.img2.setImageResource(R.drawable.yellowridebell)
+                Log.d("ㅡㅡ","너무 화난다")
+                if (context != null) {
+                    // 다이얼로그를 띄우는 코드
+                    val builder = AlertDialog.Builder(context)
+                    builder.setTitle("승차벨을 활성화하시겠습니까?")
+                        .setMessage("승차벨 정보를 버스에 알립니다.")
+                        .setPositiveButton("확인") { _, _ ->
+                            // 확인 버튼을 눌렀을 때 처리하는 코드
+                        }
+                        .setNegativeButton("취소") { _, _ ->
+                            // 취소 버튼을 눌렀을 때 처리하는 코드
+                        }
+                    builder.create().show()
+                }else{
+                    Log.d("ㅡㅡ","너무 화난다")
+                }
             }else{
                 holder.img2.setImageResource(R.drawable.ridebell)
             }
-            Log.d("ㅡㅡ","너무 화난다")
-            if (context != null) {
-                // 다이얼로그를 띄우는 코드
-                val builder = AlertDialog.Builder(context)
-                builder.setTitle("승차벨을 활성화하시겠습니까?")
-                    .setMessage("승차벨 정보를 버스에 알립니다.")
-                    .setPositiveButton("확인") { _, _ ->
-                        // 확인 버튼을 눌렀을 때 처리하는 코드
-                    }
-                    .setNegativeButton("취소") { _, _ ->
-                        // 취소 버튼을 눌렀을 때 처리하는 코드
-                    }
-                builder.create().show()
-            }else{
-                Log.d("ㅡㅡ","너무 화난다")
-            }
+
         }
 
     }

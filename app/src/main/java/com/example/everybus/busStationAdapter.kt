@@ -1,5 +1,6 @@
 package com.example.everybus
 
+import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Color
 import android.util.Log
@@ -145,7 +146,31 @@ class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
                 holder.BSLineKind.text = busInfo.title
                 holder.BSNextBusStop.text = busInfo.sub
             }
-
+        }
+        var cnt = 0
+        holder.imgBS_rb.setOnClickListener {
+            cnt++
+            if (cnt % 2 == 1) {
+                Log.d("ㅡㅡ", "너무 화난다")
+                if (context != null) {
+                    // 다이얼로그를 띄우는 코드
+                    val builder = AlertDialog.Builder(context)
+                    builder.setTitle("승차벨을 활성화하시겠습니까?")
+                        .setMessage("승차벨 정보를 버스에 알립니다.")
+                        .setPositiveButton("확인") { _, _ ->
+                            // 확인 버튼을 눌렀을 때 처리하는 코드
+                        }
+                        .setNegativeButton("취소") { _, _ ->
+                            // 취소 버튼을 눌렀을 때 처리하는 코드
+                        }
+                    builder.create().show()
+                } else {
+                    Log.d("ㅡㅡ", "너무 화난다")
+                }
+                holder.imgBS_rb.setImageResource(R.drawable.yellowridebell)
+            } else {
+                holder.imgBS_rb.setImageResource(R.drawable.ridebell)
+            }
 
         }
 

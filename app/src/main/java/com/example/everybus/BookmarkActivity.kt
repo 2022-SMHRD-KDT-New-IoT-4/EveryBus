@@ -41,10 +41,9 @@ class BookmarkActivity : Fragment() {
         bookmarkList.add(BookmarkVO(R.drawable.busstop, "송원대", "송암공단입구 방면", "", 0))
 
         // 즐겨찾기 Adapter
+        // 없어도 되는 코드다
         val adapter = BookmarkAdapter(requireContext(), bookmarkList, object : BookmarkAdapter.MyItemClickListener{
             override fun onItemClick(position: Int) {
-
-
                 if (context != null && !activity?.isFinishing!!) {
                     // 다이얼로그를 띄우는 코드
                     val builder = AlertDialog.Builder(requireContext())
@@ -60,7 +59,6 @@ class BookmarkActivity : Fragment() {
                 }else{
                     Log.d("ㅡㅡ","너무 화난다")
                 }
-
             }
         })
         rc2.layoutManager = LinearLayoutManager(this.context)

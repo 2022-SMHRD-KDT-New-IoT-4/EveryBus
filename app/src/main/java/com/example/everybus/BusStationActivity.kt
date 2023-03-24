@@ -1,17 +1,21 @@
 package com.example.everybus
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+
 import org.json.JSONObject
+
 
 
 class BusStationActivity: AppCompatActivity() {
@@ -106,8 +110,7 @@ class BusStationActivity: AppCompatActivity() {
 //        }
 
         // Adpater 연결
-        adapter = busStationAdapter(applicationContext,data)
-        //
+        adapter = busStationAdapter(this@BusStationActivity,data)
         rcStation.adapter = adapter
         var layoutManager = LinearLayoutManager(this)
         rcStation.layoutManager = layoutManager
