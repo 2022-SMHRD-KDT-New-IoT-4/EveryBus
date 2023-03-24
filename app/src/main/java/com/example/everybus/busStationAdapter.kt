@@ -14,6 +14,7 @@ import com.google.gson.Gson
 
 class busStationAdapter(var context: Context, var data:ArrayList<BusStationVO>):
     RecyclerView.Adapter<busStationAdapter.ViewHolder>() {
+
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         // 즐겨찾기 이미지
         val imgBS_bm : ImageButton

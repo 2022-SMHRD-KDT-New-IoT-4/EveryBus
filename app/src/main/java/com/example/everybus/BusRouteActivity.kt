@@ -172,7 +172,7 @@ class BusRouteActivity : AppCompatActivity() {
                                 Log.d("busStop 요기야", busStop.toString())
 
 
-                                val con:Array<String> = arrayOf("매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유")
+                                val con:Array<String> = arrayOf("매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유","매우 혼잡","보통","혼잡","매우혼잡","여유","여유")
 
                                 for(j in 0 until busStop.size) {
                                     Log.d("c", c.toString())

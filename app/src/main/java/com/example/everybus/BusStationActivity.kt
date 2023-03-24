@@ -77,7 +77,7 @@ class BusStationActivity: AppCompatActivity() {
                         // 첫 번째 - 남은 정류소 개수
                         val bsRemainStop1 = bus.getString("REMAIN_STOP")
                         // 첫 번째 - 혼잡 정보
-                        val bsConfusion1 = "보통"
+                        val bsConfusion1 = "매우혼잡"
 
                         // BusStationVO에 데이터 추가
                         data.add(BusStationVO(R.drawable.star_bus,bsLineKind,bsLineName,bsNextBusStop, bsRemainMin1
