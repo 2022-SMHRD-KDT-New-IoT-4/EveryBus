@@ -109,10 +109,12 @@
         android:layout_width="85dp"
         android:layout_height="60dp"
         android:layout_marginStart="136dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:padding="0sp"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStopName"
         app:srcCompat="@drawable/info" />
@@ -127,8 +129,8 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="@+id/imageButton8"
         app:layout_constraintTop_toTopOf="@+id/imageButton8"
         app:layout_constraintVertical_bias="1.0" />
